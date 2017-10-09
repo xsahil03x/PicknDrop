@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.magarex.pickndrop.DriverActivity">
+
+    <EditText
+        android:id="@+id/vehicle_Type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Vehicle Type"
+        android:layout_marginTop="202dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/vehicle_Name"
+        android:layout_below="@+id/vehicle_Type"
+        android:hint="Vehicle Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/vehicle_seats"
+        android:hint="Vehicle Seats"
+        android:layout_below="@+id/vehicle_Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:hint="Add Vehicle"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/vehicle_seats"
+        android:id="@+id/btnAddVehicle"/>
+
+
+
+</RelativeLayout>

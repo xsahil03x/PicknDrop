@@ -1,0 +1,107 @@
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchBar1"
+        android:orientation="horizontal">
+
+        <EditText
+            android:paddingLeft="10dp"
+            android:id="@+id/search_Box_Home"
+            android:inputType="textNoSuggestions"
+            android:layout_width="315dp"
+            android:layout_height="50dp"
+            android:background="@drawable/edit_text_style"
+            android:gravity="center"
+            android:drawableLeft="@drawable/ic_home_black_24dp"
+            android:hint="Set Home" />
+
+        <ImageButton
+            android:id="@+id/btnSearchHome"
+            android:background="@drawable/edit_text_style"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/search" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/searchBar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchBar2"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/search_Box_Destination"
+            android:paddingLeft="10dp"
+            android:inputType="textNoSuggestions"
+            android:layout_width="315dp"
+            android:layout_height="50dp"
+            android:background="@drawable/edit_text_style"
+            android:gravity="center"
+            android:drawableLeft="@drawable/ic_work_black_24dp"
+            android:hint="Search Office" />
+
+        <ImageButton
+            android:id="@+id/btnSearchDestination"
+            android:layout_width="match_parent"
+            android:src="@drawable/search"
+            android:background="@drawable/edit_text_style"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/map"
+        android:layout_below="@+id/searchBar2"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="425dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/map"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Enter Date"
+            android:inputType="date" />
+
+        <DatePicker
+            android:layout_width="50dp"
+            android:id="@+id/d_DatePicker"
+            android:datePickerMode="spinner"
+            android:layout_height="match_parent">
+
+        </DatePicker>
+
+        <EditText
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Enter Time"
+            android:inputType="time"/>
+
+        <TimePicker
+            android:layout_width="50dp"
+            android:id="@+id/d_TimePicker"
+            android:timePickerMode="spinner"
+            android:layout_height="match_parent">
+
+        </TimePicker>
+
+    </LinearLayout>
+
+</RelativeLayout>
